@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 1%;
+  }
+
+header {
+    text-align: center;
+    font-size:40px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    color:#ffffff;
+    text-align: center;
+    border: 1px white solid;
+    background-color: #002A62;
+    padding: 10px;
+  }
+
+  h1{
+    font-family: 'Merriweather', serif;
+    font-size: 26px;
+    padding: 7px;
+    margin: 3px;
+  }
+  
+  h2,
+  .quizpage{
+    padding-top: 10px;
+    align-items: center;
+    font-size: 17px;
+    /* padding: 7px; */
+    color: #000000;
+    max-width: 47%;
+    margin: auto;
+    } 
+    
+    body {
+    font-family: 'Merriweather', serif;
+    color: #000000;
+    background-color: ece7e7;
+  }
+  
+  .startScreen,
+  .finalScreen  {
+    align-items: center;
+    margin: 10px auto;
+    padding:5px;
+  }
+  
+  .images {
+    display:block;
+    margin: 7px auto;
+    padding:3px;
+    width: 30%;
+    border: 0.1em solid #808080;
+    
+  }
+ 
+  button#start,
+  button#submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    height: auto;
+    width: auto;
+    cursor: pointer;
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    border: 1px  solid #002A62;
+    background-color:  #002A62;
+    color: #ffffff;
+    padding: 4px 15px 4px 15px;
+  }
+
+  button#next,
+  button#retake {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    height: auto;
+    width: auto;
+    cursor: pointer;
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    border: 1px solid #000000;
+    background-color:  #ffa700;
+    color: #000000;
+    padding: 4px 15px 4px 15px;
+  }
+
+  .responserightbox
+  {
+   margin:auto;
+   text-align: center;
+   font-size: 22px;
+   max-width: 25%; 
+   background:#ffffff;
+   padding: 10px;
+   border:2px solid #002A62;
+   }  
+
+   #pass
+  {
+   margin:auto;
+   text-align: center;
+   font-size: 18px;
+   max-width: 50%; 
+   background:#ffffff;
+   padding: 10px;
+   border:2px solid #002A62;
+   }  
+
+   #fail
+    {
+     margin:auto;
+     text-align: center;
+     font-size: 18px;
+     max-width: 60%; 
+     background:ivory;
+     padding: 10px;
+     border:2px solid #fe0000;
+     } 
+
+    .responsewrongbox
+    {
+     margin:auto;
+     font-size: 18px;
+     max-width: 75%; 
+     background:ivory;
+     padding: 10px;
+     border:2px solid #fe0000;
+     }  
+
+
+
+     #finalscore
+     {
+      margin:auto;
+      text-align: center;
+      font-size: 22px;
+      max-width: 50%; 
+      padding: 10px;
+      
+      } 
+  

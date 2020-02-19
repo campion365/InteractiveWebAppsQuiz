@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Orbitron400,900&display=swap" rel="stylesheet">  
+    <title>XYZ Employee Quiz</title>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+<header>XYZ Company<br>
+<h1 id="quizTitleConstant">On-Boarding Quiz: Company Policies<br><br>Question 1/10 &emsp;&emsp; Correct Answers: 0</h1>
+</header>
+<body>
+    <section role="quizpage">
+        <section class="quizpage">
+          <p>How long can you leave food in the office refridgerator?</p>
+
+          <div>
+            <input type="radio" id="opt1" name="opt1" value="As long as I want"
+                   checked>
+            <label for="a1">As long as it doesn't smell</label>
+          </div>
+          
+          <div>
+            <input type="radio" id="opt2" name="opt2" value="Two weeks">
+            <label for="a2">Two weeks</label>
+          </div>
+          
+          <div>
+            <input type="radio">
+            <label for="a3">The refrigerator is emptied at 5pm on Fridays. All leftover items will be thrown away</label>
+          </div>
+  
+        <div class="submit">
+          <button type="button" id="submit"> Submit</button>
+        </div>
+        </section>
+        <br>
+
+        <section class ="responserightbox">
+          <p>Correct!</p>
+          </section>
+          <br>
+        
+        <section class ="responsewrongbox">
+          <p>Incorrect. The refrigerator is emptied at 5pm on Fridays, so be sure to remove your food. </p>
+            </section>
+          
+          <div class="next">
+            <button type="button" id="next"> Next Question</button>
+          </div>
+
+
+        </section>
+
+<section></section>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
