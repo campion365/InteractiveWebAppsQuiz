@@ -17,19 +17,25 @@ header {
     padding: 10px;
   }
 
-  h1{
+  h1,
+  .scoreboard{
     font-family: 'Merriweather', serif;
-    font-size: 26px;
+    font-size: 22px;
     padding: 7px;
     margin: 3px;
   }
+
+
   
   h2,
-  .quizpage{
+  .questionDisp,
+  .responseDisp,
+  .quizpage,
+  .questiontext
+  {
     padding-top: 10px;
     align-items: center;
     font-size: 17px;
-    /* padding: 7px; */
     color: #000000;
     max-width: 47%;
     margin: auto;
@@ -42,7 +48,8 @@ header {
   }
   
   .startScreen,
-  .finalScreen  {
+  .finalScreen,
+  .finalpgDisp {
     align-items: center;
     margin: 10px auto;
     padding:5px;
