@@ -130,11 +130,11 @@ const questionsArray =
 let currentQuestion = 0;
 let score = 0;
 
-// //update score field
-// function updateScore() {
-//   score ++;
-//   $('.scoreNum').text(score);
-// }
+//update score field
+function updateScore() {
+  score ++;
+  $('.scoreNum').text(score);
+}
 
 // // updates the question number 
 // function updateQuestionNumber() {
@@ -156,9 +156,11 @@ function renderLandingPage(){
   </section>`
   $("main").html(firstpage);
   $("#start").on ('click', function(){
-   renderQuestionPage()
+    renderQuestionPage();
   });
+console.log("renderlandingpage ran");
 }
+
 
 
 function renderQuestionPage() {
@@ -169,68 +171,58 @@ function renderQuestionPage() {
     </fieldset>
   </form>`
 
-    let elementfs = $(questionPage)
+  let elementfs = $(questionPage)
   let fieldSelector = elementfs.find('fieldset');
 questionsArray[currentQuestion].options.forEach(function (optionsValue, optionsIndex){
     $(`<label class="questionDisp" for="${optionsIndex}">
-        <input class="radio" type="radio" id="${optionsIndex}" value="${optionsValue}" name="${optionsValue}" required>
+        <input class="radio" type="radio" id="${optionsIndex}" value="${optionsValue}" name="questionoption" required>
         <span>"${optionsValue}"</span><br>
       </label>
       `).appendTo(fieldSelector);
   });
-  $(`<button type="button" id="submit"> Submit</button>`).appendTo(fieldSelector);
+  $(`<button type="submit" id="submit"> Submit</button>`).appendTo(fieldSelector);
   $("main").empty()
   $("main").append(elementfs)
-  $("form").submit (function (){currentQuestion++;
-    renderQuestionPage()
-    
-    //this is where they would show the feedback - correct page or the incorrect page would be shown
-//render feedbackPage
+  $("form").submit (function (event){
+    event.preventDefault();
+    renderFeedbackPage();
+    //currentQuestion++;
+  
   });
+  console.log("renderquestionpage ran did it");
 };
 
 
-
-console.log("renderquestionpage ran did it");
-//$("main").html("test text question page//REPLACE THIS STRING WITH HTML");
-
-  //TEMPLATE LITERAL TO PULL QUESTINO THEY ARE ON IN STORE
-
-
-function renderFeedbackPage (){
-// //selects an answer and checks if it is equivalent to correct answer
-function submitAnswer() {
-    event.preventDefault();
-        $('.responseDisp').show();
-        let selected = $('input:checked');
-        let answer = selected.value();
-        let correct = questionsArray[currentQuestion].correctAnswer;
-        if (answer === correctAnswer) {
-        rightAnswer();
+ function renderFeedbackPage (){
+// $('form').submit (function(event) {
+//         event.preventDefault();
+      let selected = $('input:checked');
+      let answer = selected.val(); //DO I NEED TO CHANGE THIS TO something else?
+      let correct = questionsArray[currentQuestion].correctAnswer;
+       if (answer === correct) {
+         rightAnswer();
         } 
         else {
         wrongAnswer();
-        }
-    };
-      console.log("renderfeedback pg ran")
-    renderFeedbackPage(submitAnswer());  
+        };
+
+     console.log("renderfeedback pg ran")
+  }
 
 
 //feedback for correct answer and updates the score
-function rightAnswer() {{
+function rightAnswer() {
   $("questionPage").append(
       `<section class="responseDisp"> </section>
       <p class="responserightbox">Correct!</p>
       <button type="button" id="next">Next</button>`
-  );}
+  );
+  $("input:checked").closest("label").css("background-color", "green");
   updateScore();
-  updateQuestionNumber ();
-
+console.log("rightanswer ran");
 }
-console.log("rightanswer ran")
 
 // feedback if the answer is incorrect
-
 function wrongAnswer(){
   $("questionPage").append(
     `<section class="responseDisp"> </section> 
@@ -239,9 +231,8 @@ function wrongAnswer(){
     <p class="responsewrongbox">The correct answer is: ${questionsArray[currentQuestion].correctAnswer}</p>
       <button type="button" id="next">Next</button>`
   );
-  updateQuestionNumber ();
   console.log("wronganswer ran")
-}
+};
 
 
 
@@ -257,10 +248,10 @@ function renderFinalPage (){
 
 }
 
+//runs to set up everything initially - don't include all fxns
 function quizfinalLaunch (){
   renderLandingPage();
-  renderQuestionPage();
-  renderFeedbackPage();
+
  }
 
 $(quizfinalLaunch);

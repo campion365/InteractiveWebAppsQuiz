@@ -28,7 +28,6 @@ header {
 
   
   h2,
-  .questionDisp,
   .responseDisp,
   .quizpage,
   .questiontext
@@ -153,16 +152,17 @@ header {
       
       } 
   
-    #radio,
-    #questionDisp {
+    .questionDisp
+    {
       display: block;
-      margin-top:25px;
-      margin-bottom: 25px;
+      align-items: center;
+      margin-top:10px;
+      margin-bottom: 10px;
       height: auto;
       width: auto;
       cursor: pointer;
       font-size: 14px;
-      padding: 15px;
+      padding: 3px;
     }
 
     .hide {
