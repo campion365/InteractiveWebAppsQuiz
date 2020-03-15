@@ -18,21 +18,29 @@ header {
   }
 
   h1,
-  .scoreboard{
+  .scoreboard {
     font-family: 'Merriweather', serif;
     font-size: 22px;
     padding: 7px;
     margin: 3px;
   }
 
-
+  #startsubheader {
+  margin-left: 8%;
+  margin-right: 8%;
+  }
   
+  
+  .feedbacktext {
+    text-align: center;
+    font-size: 18px;
+  }
+
+
   h2,
-  .questionDisp,
   .responseDisp,
   .quizpage,
-  .questiontext
-  {
+  .questiontext {
     padding-top: 10px;
     align-items: center;
     font-size: 17px;
@@ -51,22 +59,21 @@ header {
   .finalScreen,
   .finalpgDisp {
     align-items: center;
-    margin: 10px auto;
-    padding:5px;
+    padding:10px;
   }
   
   .images {
     display:block;
-    margin: 7px auto;
-    padding:3px;
-    width: 30%;
+    margin: 15px auto;
+    width: 25%;
     border: 0.1em solid #808080;
-    
   }
  
+
   button#start,
-  button#submit {
-    display: block;
+  button#submit,
+  button#retake {
+    display: block; 
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
@@ -98,58 +105,128 @@ header {
     padding: 4px 15px 4px 15px;
   }
 
-  .responserightbox
-  {
+  .responserightbox {
    margin:auto;
    text-align: center;
    font-size: 22px;
-   max-width: 25%; 
+   max-width: 150px;
    background:#ffffff;
    padding: 10px;
    border:2px solid #002A62;
    }  
 
-   #pass
-  {
-   margin:auto;
-   text-align: center;
-   font-size: 18px;
-   max-width: 50%; 
-   background:#ffffff;
-   padding: 10px;
-   border:2px solid #002A62;
-   }  
 
-   #fail
-    {
-     margin:auto;
-     text-align: center;
-     font-size: 18px;
-     max-width: 60%; 
-     background:ivory;
-     padding: 10px;
-     border:2px solid #fe0000;
-     } 
-
-    .responsewrongbox
-    {
-     margin:auto;
-     font-size: 18px;
-     max-width: 75%; 
-     background:ivory;
-     padding: 10px;
-     border:2px solid #fe0000;
-     }  
+  .responsewrongbox {
+    margin:auto;
+    font-size: 18px;
+    max-width: 75%; 
+    background:ivory;
+    padding: 10px;
+    border:2px solid #fe0000;
+    }  
 
 
 
-     #finalscore
-     {
-      margin:auto;
-      text-align: center;
-      font-size: 22px;
-      max-width: 50%; 
-      padding: 10px;
-      
-      } 
+    #finalscore {
+    margin:auto;
+    text-align: center;
+    font-size: 22px;
+    max-width: 50%; 
+    padding: 10px;
+    
+    } 
+
+  .questionDisp,
+  .questiondisplayarea
+ {
+    display: flex;
+    align-items: center;
+    align-content: center;  
+    margin-top:10px;
+    margin-left: 10%;
+    margin-right: 2%;
+    height: auto;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .radio {
+    display: flex;
+    align-items: center;
+    align-content: center;  
+    margin-top:10px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+
+
+  .hide {
+  display: none;
+  }
+
+@media (max-width: 400px) {
+  header {
+    font-size:25px;
+    padding: 8px;
+    }
   
+  h1,
+  .scoreboard{
+      font-size: 18px;
+      padding: 4px;
+      margin: 3px;
+    }
+
+  #startsubheader,
+  .feedbacktext{
+      font-size: 15px;
+      }
+
+  #finalscore{
+    font-size: 17px;
+    }
+
+
+ .responserightbox{
+      max-width: 50%; 
+       }  
+    
+
+    .images {
+      width: 75%;
+    }
+
+    .questionDisp,
+    .questiondisplayarea,
+    .radio {
+      display: flex;
+      align-items: center;  
+      margin-top:10px;
+      margin-left: 5%;
+      margin-right: 10px;
+      height: auto;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 3px;
+    }
+
+    }
+
+@media (min-width: 1068px) {
+  .questiondisplayarea,
+  .radio {
+    margin-left: 10%;
+    margin-right: 5%;
+  }
+  .questionDisp,
+  .questiondisplayarea {
+    margin-left: 19%;
+    margin-right: 5%;
+    }
+ 
+
+}
