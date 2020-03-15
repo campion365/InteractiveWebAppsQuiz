@@ -28,9 +28,20 @@ header {
   #startsubheader {
   margin-left: 8%;
   margin-right: 8%;
+  font-size: 20px;
   }
   
-  
+  main {
+    align-items: center;
+    align-content: center; 
+  }
+
+  form {
+    align-items: center;
+    align-content: center; 
+  }
+
+
   .feedbacktext {
     text-align: center;
     font-size: 18px;
@@ -53,6 +64,7 @@ header {
     font-family: 'Merriweather', serif;
     color: #000000;
     background-color: ece7e7;
+    align-items: center;
   }
   
   .startScreen,
@@ -136,30 +148,31 @@ header {
     
     } 
 
-  .questionDisp,
-  .questiondisplayarea
- {
+  .questiondisplayarea {
+    text-align: center;
+  }
+
+  .questionlabel,
+  .questiondisplayarea {
     display: flex;
     align-items: center;
     align-content: center;  
     margin-top:10px;
     margin-left: 10%;
-    margin-right: 2%;
+    margin-right: 10%;
     height: auto;
     font-size: 20px;
-    padding: 5px;
+    padding: 10px;
   }
 
   .radio {
-    display: flex;
     align-items: center;
     align-content: center;  
-    margin-top:10px;
+    margin-right: 3%;
     width: auto;
     height: auto;
     cursor: pointer;
     font-size: 20px;
-    padding: 5px;
   }
 
 
@@ -182,13 +195,20 @@ header {
     }
 
   #startsubheader,
-  .feedbacktext{
+  .feedbacktext {
       font-size: 15px;
       }
+     
+     
+  .questiondisplayarea {
+    font-size: 18px;
+    }
+
+
 
   #finalscore{
-    font-size: 17px;
-    }
+      font-size: 17px;
+}
 
 
  .responserightbox{
@@ -200,14 +220,13 @@ header {
       width: 75%;
     }
 
-    .questionDisp,
-    .questiondisplayarea,
+    .questionlabel,
     .radio {
       display: flex;
       align-items: center;  
       margin-top:10px;
-      margin-left: 5%;
-      margin-right: 10px;
+      margin-left: 5%; 
+      margin-right: 5%;
       height: auto;
       cursor: pointer;
       font-size: 14px;
@@ -216,17 +235,23 @@ header {
 
     }
 
-@media (min-width: 1068px) {
-  .questiondisplayarea,
-  .radio {
-    margin-left: 10%;
-    margin-right: 5%;
-  }
-  .questionDisp,
-  .questiondisplayarea {
-    margin-left: 19%;
-    margin-right: 5%;
-    }
- 
 
+
+@media (min-width: 825px) {
+
+  .questiondisplayarea {
+    text-align:center;
+    font-size: 22px;
+  }
+  .questionlabel{
+    display: flex;
+
+  }
+}
+
+@media (min-width: 1400px) {
+  .questionlabel {
+    margin-left: 30%; 
+    margin-right: 30%;
+}
 }

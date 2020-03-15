@@ -178,9 +178,9 @@ function renderQuestionPage() {
   let elementfs = $(questionPage)
   let fieldSelector = elementfs.find('fieldset');
   questionsArray[currentQuestion].options.forEach(function (optionsValue, optionsIndex) {
-    $(`<label class="questionDisp" for="${optionsIndex}">
+    $(`<label class="questionlabel" for="${optionsIndex}">
         <input class="radio" type="radio" id="${optionsIndex}" value="${optionsValue}" name="questionoption" required>
-        <span>"${optionsValue}"</span><br>
+        <span>${optionsValue}</span><br>
       </label>
       `).appendTo(fieldSelector);
   });
@@ -277,9 +277,9 @@ function finalScoreNote() {
 
   const terrible = 'You did not pass the quiz. Please review the company policy handbook and retake the quiz.'
 
-  if (score >= 9) {
+  if (score >= 8) {
     return passed;
-  } else if (score < 9 && score >= 8) {
+  } else if (score < 7 && score >= 6) {
     return okay;
   } else {
     return terrible;
