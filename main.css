@@ -52,7 +52,6 @@ header {
 
 
   #finalscore,
-   .responseDisp
   .quizpage,
   .questiontext {
     padding-top: 10px;
@@ -133,6 +132,8 @@ header {
 
   .responsewrongbox {
     margin:auto;
+    text-align: center;
+    align-content: center;
     font-size: 18px;
     max-width: 75%; 
     background:ivory;
@@ -161,8 +162,8 @@ header {
     align-items: center;
     align-content: center;  
     margin-top:10px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
     height: auto;
     font-size: 20px;
     padding: 10px;
@@ -255,13 +256,13 @@ header {
     text-align:center;
     font-size: 22px;
   }
-  .questionlabel{
-    display: flex;
-
-  }
+  /*.questionlabel{
+    margin-left: 30%; 
+    margin-right: 30%;
+  }*/
 }
 
-@media (min-width: 1400px) {
+ @media (min-width: 1400px) {
   .questionlabel {
     margin-left: 30%; 
     margin-right: 30%;

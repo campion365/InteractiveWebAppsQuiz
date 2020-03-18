@@ -152,8 +152,8 @@ function renderLandingPage() {
   const firstpage = `<div class="quizstartpg">
   <section class="startScreen">
     <img class= "images"  src="startscreen_officebright.jpg"  alt="office interior">
-    <p id="startsubheader"> Welcome to XYZ. By now you should have had a chance to review the employee handbook.
-    Based on what you have learned, please complete the following quiz. <br><br>You need to answer at least 8 questions correctly to pass.</p>
+    <h2 id="startsubheader"> Welcome to XYZ. By now you should have had a chance to review the employee handbook.
+    Based on what you have learned, please complete the following quiz. <br><br>You need to answer at least 8 questions correctly to pass.</h2>
   </div>
     <div class="startbutton">
     <button type="button" id="start"> Start Quiz</button>
