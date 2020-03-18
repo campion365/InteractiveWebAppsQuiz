@@ -18,9 +18,11 @@ header {
   }
 
   h1,
-  .scoreboard {
+  .scoreboard,
+  .scoreboardlist
+   {
     font-family: 'Merriweather', serif;
-    font-size: 22px;
+    font-size: 24px;
     padding: 7px;
     margin: 3px;
   }
@@ -48,8 +50,9 @@ header {
   }
 
 
-  h2,
-  .responseDisp,
+
+  #finalscore,
+   .responseDisp
   .quizpage,
   .questiontext {
     padding-top: 10px;
@@ -212,7 +215,7 @@ header {
 
 
  .responserightbox{
-      max-width: 50%; 
+      max-width: 60%; 
        }  
     
 
@@ -232,6 +235,15 @@ header {
       font-size: 14px;
       padding: 3px;
     }
+
+    .responseDisp
+     {
+      padding-top: 10px;
+      align-items: center;
+      font-size: 17px;
+      color: #000000;
+      margin: auto;
+      }  
 
     }
 

@@ -149,11 +149,12 @@ function renderLandingPage() {
   $('.scoreNum').text('0');
   currentQuestion = 0;
   score = 0;
-  const firstpage = `<section class="startScreen">
+  const firstpage = `<div class="quizstartpg">
+  <section class="startScreen">
     <img class= "images"  src="startscreen_officebright.jpg"  alt="office interior">
     <p id="startsubheader"> Welcome to XYZ. By now you should have had a chance to review the employee handbook.
     Based on what you have learned, please complete the following quiz. <br><br>You need to answer at least 8 questions correctly to pass.</p>
-
+  </div>
     <div class="startbutton">
     <button type="button" id="start"> Start Quiz</button>
   </div>
@@ -162,18 +163,20 @@ function renderLandingPage() {
   $("#start").on('click', function () {
     renderQuestionPage();
   });
-  console.log("renderlandingpage ran");
 }
 
 
 //renders question - question text, answer options as radio buttons
 function renderQuestionPage() {
-  const questionPage = `<section class="questionDisp">
+  const questionPage = `<div class="quizinputfield">
+  <section class="questionDisp">
   <form>
     <fieldset>
       <legend class="questiondisplayarea">${questionsArray[currentQuestion].question}</legend>
     </fieldset>
-  </form>`
+  </form>
+  </div>
+  </section>`
 
   let elementfs = $(questionPage)
   let fieldSelector = elementfs.find('fieldset');
@@ -193,8 +196,7 @@ function renderQuestionPage() {
     $("input[type=radio]").attr('disabled', true);
 
   });
-  console.log("renderquestionpage ran did it");
-};
+}
 
 //queues up feedback page by checking to see if selected option is correct or not and queues approp response
 function renderFeedbackPage() {
@@ -208,31 +210,34 @@ function renderFeedbackPage() {
   else {
     wrongAnswer();
   };
-  handleNextQuestionPage()
-  console.log("renderfeedback pg ran")
+  handleNextQuestionPage();
 }
 
 
 //feedback for correct answer and updates the score
 function rightAnswer() {
   $("main").append(
-    `<section class="responseDisp"> </section>
+    `<div class="rightanswerresponse">
+    <section class="responseDisp">
       <p class="responserightbox">Correct!</p>
-      <button type="button" id="next">Next</button>`
+      <button type="button" id="next">Next</button>
+      </div>
+      </section>`
   );
   $("input:checked").closest("label").css("border", "2px solid #002A62");
   updateScore();
-  console.log("rightanswer ran");
 }
 
 // feedback if the answer is incorrect
 function wrongAnswer() {
   $("main").append(
-    `<section class="responseDisp"> </section> 
+    `<div class="wronganswerresponse">
+    <section class="responseDisp">
     <p class="responsewrongbox">Incorrect!<br><br>The correct answer is: ${questionsArray[currentQuestion].correctAnswer}</p>
-      <button type="button" id="next">Next</button>`
+      <button type="button" id="next">Next</button>
+      </div>
+      </section>`
   );
-  console.log("wronganswer ran")
 };
 
 
@@ -249,23 +254,24 @@ function handleNextQuestionPage() {
     }
 
   });
-
-  console.log("renderNextQuestion ran");
 }
 
 //function to show final page and pull in score note based on final score
 function renderFinalPage() {
   $("main").empty();
   $("main").append(
-    `<section class="finalpgDisp"> </section>
-        <img class= "images" src="Finishscreen.jpg" scr= alt="office white board">
+    `<div class="finalQuizPage">
+    <section class="finalpgDisp">
+        <img class= "images" src="Finishscreen.jpg" alt="office white board">
         <h2 id="finalscore"> You got ${score} out of 10 questions correct </h2>
         <br>
         <section class= "feedbacktext">${finalScoreNote()} </section>
         <br>
+        </div>
         <div class="retakebutton">
         <button type="button" id="retake"> Retake Quiz</button>
-      </div>`
+      </div>
+      </section>`
   )
   retakeQuiz ();
 };
@@ -292,8 +298,6 @@ function retakeQuiz() {
   $("#retake").on('click', function () {
     renderLandingPage();
   })
-
-  console.log("final page ran");
 };
 
 //runs to set up everything initially - don't include all fxns
